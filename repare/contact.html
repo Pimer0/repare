@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,700;0,900;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+/>
+    <title>contact form</title>
+</head>
+
+<body>
+
+<link href="/src/style-contact.css" rel="stylesheet">
+
+<header>
+    <div class="logo">
+        <a href="/index.html"><img src="/src/Assets/Repare.svg"/></a>
+    </div>
+    <div class="boutonContacte">
+        <button>Nous contacter</button>
+    </div>
+</header>
+
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h2 class="fcf-h3">Dites-nous comment nous pouvons vous aider</h2>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Votre nom</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Votre email</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Votre message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Envoyer votre demmande</button>
+        </div>
+
+    </form>
+    </div>
+
+</div>
+<footer>
+    <div class="footerButton">
+        <a>
+            <img src="/src/Assets/instagram.svg" />
+        </a>
+        <a>
+            <img src="/src/Assets/whatsapp.svg" />
+        </a>
+        <a>
+            <img src="/src/Assets/appel-telephonique.svg" />
+        </a>
+    </div>
+    <div class="footerLinks">
+        <a href="">Nous contacter</a>
+        <a href="">Accueil</a>
+        <p>Site conçu par Pmerandon</p>
+    </div>
+</footer>
+</body>
+</html>

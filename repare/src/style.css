@@ -1,0 +1,639 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f6f6f6;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	justify-content: center; /* Centre le contenu horizontalement */
+	overflow-x: hidden;
+}
+
+header {
+	background-color: #f6f6f6;
+	width: 100%; /* Utiliser la largeur totale de l'écran */
+	height: 170px;
+	display: flex;
+	justify-content: left; /* Pour centrer horizontalement les éléments du header */
+	align-items: center;
+	background: rgba(246, 246, 246, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin-bottom: 30px;
+}
+
+header img {
+	width: 300px;
+}
+
+div.logo {
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-size: 128px;
+	text-align: center;
+	height: 150px;
+	width: 450px;
+}
+
+header button {
+	width: 233px;
+	height: 74px;
+	flex-shrink: 0;
+	border-radius: 24px;
+	background: #ffcb74;
+	border: none;
+	position: relative;
+	z-index: 1001;
+	display: flex; /* Utilisation de flexbox */
+	align-items: center; /* Centrer verticalement */
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+header button::before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 15%;
+	height: 50%;
+	background-image: url(/src/Assets/angleDroitHover.svg); /* Nouvelle image */
+	background-size: cover; /* Ajuster la taille de l'image */
+	opacity: 0; /* Initialement transparente */
+	transition: opacity 0.3s ease; /* Ajoutez une transition pour le fondu */
+}
+
+/* Faites apparaitre l'image au survol */
+header button:hover::before {
+	opacity: 1; /* Rendre l'image visible au survol */
+}
+
+header button:hover {
+	background: #2f2f2f;
+	color: #f6f6f6;
+}
+
+button {
+	width: 233px;
+	height: 74px;
+	flex-shrink: 0;
+	border-radius: 24px;
+	background: #ffcb74;
+	border: none;
+	color: #000;
+	font-family: Montserrat;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+div.baseline {
+	width: 90%;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	background: #fff;
+	display: flex;
+}
+
+div.textBaseline {
+	margin-left: 5%;
+}
+
+h2.baselineTitre {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	width: 80%;
+	margin-left: 2%;
+	margin-bottom: 0%;
+}
+
+p.baselineCorps {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-left: 2%;
+}
+
+div.imageBaseline {
+	height: 90%;
+	width: 40%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 20px;
+}
+
+.imageBaseline img {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 16px;
+}
+
+div.contentSlider {
+	width: 86%;
+	height: fit-content;
+	max-width: 90%;
+	margin-top: 20px;
+	border-radius: 24px;
+	display: flex;
+	padding: 2%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+div.slider {
+	width: 100%;
+	height: fit-content;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.slider img {
+	max-width: 90%;
+	max-height: 600px;
+	border-radius: 24px;
+	object-fit: cover;
+	height: auto;
+}
+
+button.sliderGauche {
+	width: 40px;
+	height: 40px;
+	margin-left: -2%;
+	z-index: 2;
+	position: relative;
+	right: -21%;
+	margin-top: 4%;
+	background-color: #ffffff00;
+	border: none;
+}
+
+button.sliderDroit {
+	width: 40px;
+	height: 40px;
+	margin-left: -2%;
+	z-index: 2;
+	position: relative;
+	right: 20%;
+	margin-top: 4%;
+	background-color: #ffffff00;
+	border: none;
+}
+
+button.sliderDroit img {
+	height: 40px;
+	width: 40px;
+	filter: opacity(70%);
+}
+
+button.sliderGauche img {
+	height: 40px;
+	width: 40px;
+	filter: opacity(70%);
+}
+
+div.dotSlider {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #000000;
+	width: 115px;
+	height: 25px;
+	border-radius: 24px;
+	z-index: 3;
+	position: relative;
+	/* top: -31%; */
+	margin-top: -4%;
+	filter: opacity(50%);
+}
+
+div.dotSlider li {
+	color: #f6f6f6;
+	margin-left: -10%;
+	filter: none;
+	font-size: 205%;
+	left: 33px;
+	position: relative;
+}
+
+div.dotSlider li::marker {
+	margin-right: 1% !important;
+}
+
+div.dotSlider li.active {
+	color: #ffcb74;
+}
+
+div.divGeo {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 3%;
+	max-width: 1200px;
+}
+
+div.geoText {
+	width: fit-content;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5%;
+}
+
+div.geoText h2 {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	width: 80%;
+	margin-left: 2%;
+	margin-bottom: 0%;
+}
+
+div.geoText p {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-left: 2%;
+	width: 74%;
+}
+
+div.geoCarte {
+	width: fit-content;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	background: #2f2f2f;
+	display: flex;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+
+div.geoCarte img {
+	width: 264px;
+	padding: 10px;
+}
+
+div.divCTA {
+	width: 90%;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+}
+
+div.divButton {
+	width: 100%;
+	justify-content: center;
+	display: flex;
+}
+
+div.divButton button {
+	margin: 0;
+	width: 60%;
+	height: 125px;
+	display: flex;
+	align-items: center;
+	gap: 43%;
+	flex-direction: row;
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-align: left;
+	padding-left: 20px;
+	position: relative;
+	padding-left: 60px;
+}
+
+div.divButton button::before {
+	content: "";
+	position: absolute;
+	width: 13%;
+	height: 65%;
+	margin-right: 10px;
+	background-image: url(/src/Assets/enveloppe.svg);
+	background-size: cover;
+	right: 20px; /* Ajustez la position à gauche pour l'icône */
+	top: 50%; /* Centrez verticalement */
+	transform: translateY(-50%);
+}
+
+div.divButton button:hover {
+	background: #2f2f2f;
+	color: #f6f6f6;
+}
+
+div.divButton button:hover::before {
+	background-image: url(/src/Assets/enveloppe-ouverte.svg);
+}
+
+div.divQui {
+	width: 90%;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	background: #fff;
+	display: flex;
+}
+
+div.quiText {
+	width: 60%;
+}
+
+div.quiText h2 {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	width: 100%;
+	margin-left: -3%;
+	text-align: right;
+}
+
+div.quiText p {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-right: 3%;
+	text-align: right;
+}
+
+div.quiImg {
+	height: 90%;
+	width: 40%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 20px;
+}
+
+div.quiImg img {
+	width: 100%;
+}
+
+div.divTextFin {
+	width: 90%;
+	height: fit-content;
+	max-width: 1200px;
+	margin-top: 20px;
+	border-radius: 24px;
+	background: #fff;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+div.divTextFin h2 {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	width: 100%;
+	text-align: left;
+	margin-left: 2%;
+	margin-top: 3%;
+}
+
+div.divTextFin p {
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-align: left;
+	padding-left: 20px;
+	width: 80%;
+}
+
+footer {
+	background-color: #2f2f2f;
+	height: 200px;
+	width: 100%;
+	border-top-left-radius: 24px;
+	border-top-right-radius: 24px;
+	margin-top: 30px;
+}
+
+div.footerLinks {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+div.footerLinks a,
+div.footerLinks p {
+	color: #f6f6f6;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-align: center;
+	margin: 5px;
+}
+
+div.footerButton {
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+div.footerButton a {
+	margin: 16px;
+	margin-right: 47px;
+	margin-left: 47px;
+}
+
+.containerDotSlider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 0px;
+	left: -45px;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	body,
+	div.divGeo,
+	div {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+
+	div.logo {
+		height: auto;
+		align-items: end;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	div.boutonContacte {
+		align-content: flex-end;
+		flex-wrap: wrap;
+		display: flex;
+		margin-right: 20px;
+	}
+
+	div.boutonContacte button {
+		background-image: url(/src/Assets/enveloppe.svg);
+		background-size: contain;
+		background-repeat: no-repeat; /* Assurez-vous que l'image ne se répète pas dans le bouton */
+		background-position: center; /* Centrez l'image dans le bouton */
+		font-size: 0;
+		padding: 10px;
+	}
+
+	div.main {
+		width: 100%;
+		height: fit-content;
+		max-width: 1200px;
+		margin-top: 20px;
+		border-radius: 24px;
+		background: #fff;
+		display: flex;
+		height: 100vh;
+	}
+
+	div.baseline {
+		margin: 0;
+		width: 100%;
+	}
+
+	div.imageBaseline {
+		width: 90%;
+	}
+
+	div.boutonContacte button {
+		width: 70px;
+		height: 60px;
+	}
+	header {
+		height: fit-content;
+	}
+	header img {
+		width: 140px;
+	}
+
+	div.contentSlider,
+	div.dotSlider {
+		display: none;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Centrer verticalement */
+		justify-content: center; /* Centrer horizontalement */
+		height: auto;
+	}
+
+	div.footerButton a {
+		margin: 10px;
+	}
+
+	div.geoCarte {
+		margin: 0;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	div.quiImg {
+		width: 90%;
+	}
+
+	div.divButton button {
+		width: 100% !important;
+	}
+
+	div.divButton button::before {
+		display: none;
+	}
+
+	div.divCTA {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	div.divQui,
+	div.divTextFin {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+
+	div.quiText {
+		width: 98%;
+	}
+
+	div.quiText p,
+	div.quiText h2 {
+		text-align: left;
+		margin: 20px;
+	}
+
+	div.TextFin p,
+	div.TextFin h2 {
+		padding: 0;
+		margin: 20px;
+		margin-left: 20px !important;
+	}
+}
