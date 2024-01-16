@@ -1,0 +1,16 @@
+{
+    "slides": [
+        {
+            "alt": "montre",
+            "src": "/src/Assets/salvador-escalante-EfjlkpoGjs4-unsplash.jpg"
+        },
+        {
+            "alt": "montre2",
+            "src": "/src/Assets/IMG_05062.png"
+        },
+        {
+            "alt": "montre3",
+            "src": "/src/Assets/IMG_05063.png"
+        }
+    ]
+}
