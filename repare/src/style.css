@@ -637,3 +637,10 @@ div.footerButton a {
 		margin-left: 20px !important;
 	}
 }
+
+.App {
+	align-items: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
