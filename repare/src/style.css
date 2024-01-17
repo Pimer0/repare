@@ -640,7 +640,8 @@ div.footerButton a {
 
 .App {
 	align-items: center;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
+	align-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
