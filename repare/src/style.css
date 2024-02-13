@@ -115,8 +115,7 @@ div.boutonContacte {
 }
 
 div.textBaseline {
-	margin-top: 5px;
-	margin-left: 5px;
+	margin: 20px;
 }
 
 h2.baselineTitre {
@@ -128,7 +127,7 @@ h2.baselineTitre {
 	line-height: normal;
 	width: 80%;
 	margin-left: 2%;
-	margin-bottom: 0%;
+	margin-bottom: 5%;
 }
 
 p.baselineCorps {
