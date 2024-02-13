@@ -614,6 +614,7 @@ div.footerButton a {
 
 	div.divButton button {
 		width: 100% !important;
+		padding-left: 33%;
 	}
 
 	div.divButton button::before {
@@ -643,11 +644,23 @@ div.footerButton a {
 		margin: 20px;
 	}
 
-	div.TextFin p,
-	div.TextFin h2 {
+	div.divTextFin p,
+	div.divTextFin h2,
+	h2.baselineTitre,
+	p.baselineCorps,
+	div.geoText h2,
+	div.geoText p {
 		padding: 0;
 		margin: 20px;
-		margin-left: 20px !important;
+		margin-left: 10px !important;
+	}
+
+	div.footerButton a img {
+		width: 70%;
+	}
+
+	div.geoCarte img {
+		padding: 18px;
 	}
 }
 
