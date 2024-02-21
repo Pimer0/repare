@@ -17,7 +17,7 @@ html {
 header {
 	background-color: #f6f6f6;
 	width: 100%; /* Utiliser la largeur totale de l'écran */
-	height: 170px;
+	height: 130px;
 	display: flex;
 	justify-content: left; /* Pour centrer horizontalement les éléments du header */
 	align-items: center;
@@ -35,6 +35,7 @@ header {
 
 header img {
 	width: 300px;
+	margin-bottom: 25px;
 }
 
 div.logo {
@@ -109,8 +110,13 @@ div.baseline {
 	display: flex;
 }
 
+div.boutonContacte {
+	right: 10px;
+	position: absolute;
+}
+
 div.textBaseline {
-	margin-left: 5%;
+	margin: 20px;
 }
 
 h2.baselineTitre {
@@ -122,7 +128,7 @@ h2.baselineTitre {
 	line-height: normal;
 	width: 80%;
 	margin-left: 2%;
-	margin-bottom: 0%;
+	margin-bottom: 5%;
 }
 
 p.baselineCorps {
@@ -136,8 +142,8 @@ p.baselineCorps {
 }
 
 div.imageBaseline {
-	height: 90%;
-	width: 40%;
+	height: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -264,7 +270,8 @@ div.geoText {
 	background: #fff;
 	display: flex;
 	flex-direction: column;
-	padding-left: 5%;
+	margin: 5px;
+	padding: 10px;
 }
 
 div.geoText h2 {
@@ -298,8 +305,8 @@ div.geoCarte {
 	border-radius: 24px;
 	background: #2f2f2f;
 	display: flex;
-	margin-left: 20px;
-	margin-right: 0px;
+	margin: 0;
+	margin-left: 10px;
 }
 
 div.geoCarte img {
@@ -424,6 +431,7 @@ div.divTextFin {
 	background: #fff;
 	display: flex;
 	margin-bottom: 20px;
+	padding: 10px;
 }
 
 div.divTextFin h2 {
@@ -435,8 +443,7 @@ div.divTextFin h2 {
 	line-height: normal;
 	width: 100%;
 	text-align: left;
-	margin-left: 2%;
-	margin-top: 3%;
+	margin: 0;
 }
 
 div.divTextFin p {
@@ -447,7 +454,6 @@ div.divTextFin p {
 	font-weight: 500;
 	line-height: normal;
 	text-align: left;
-	padding-left: 20px;
 	width: 80%;
 }
 
@@ -502,6 +508,13 @@ div.footerButton a {
 	height: 0px;
 	left: -45px;
 	position: relative;
+}
+
+@media screen and (max-width: 1175px) {
+	div.divButton button::before {
+		width: 15%;
+		height: 66%;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -601,6 +614,7 @@ div.footerButton a {
 
 	div.divButton button {
 		width: 100% !important;
+		padding-left: 33%;
 	}
 
 	div.divButton button::before {
@@ -630,11 +644,23 @@ div.footerButton a {
 		margin: 20px;
 	}
 
-	div.TextFin p,
-	div.TextFin h2 {
+	div.divTextFin p,
+	div.divTextFin h2,
+	h2.baselineTitre,
+	p.baselineCorps,
+	div.geoText h2,
+	div.geoText p {
 		padding: 0;
 		margin: 20px;
-		margin-left: 20px !important;
+		margin-left: 10px !important;
+	}
+
+	div.footerButton a img {
+		width: 70%;
+	}
+
+	div.geoCarte img {
+		padding: 18px;
 	}
 }
 
